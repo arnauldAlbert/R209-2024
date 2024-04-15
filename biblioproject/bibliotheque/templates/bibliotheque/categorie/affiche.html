@@ -6,4 +6,11 @@ catégorie {{categorie.nom}}
 {% block principal %}
 <h3> Catégorie  {{categorie.nom}}
     <p> {{categorie.description}} </p>
+    <a href="/bibliotheque/livreajout/{{categorie.id}}/">ajouter un livre </a>
+    <ul> liste des livres
+    {% for l in livres %}
+        <li> {{ l }} </li>
+     {% endfor %}
+    </ul>
+
 {% endblock %}

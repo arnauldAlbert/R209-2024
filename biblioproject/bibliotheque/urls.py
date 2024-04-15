@@ -13,5 +13,6 @@ urlpatterns = [
     path('traitementupdate/<int:id>/', categorie_views.traitementupdate),
 
     # urls des Livres
-    path('livreajout/<int:id>/',livre_views.ajout)
+    path('livreajout/<int:id>/',livre_views.ajout),
+    path('livretraitement/<int:id>/',livre_views.traitement),
 ]

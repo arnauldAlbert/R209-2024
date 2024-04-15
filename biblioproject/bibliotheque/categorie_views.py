@@ -6,7 +6,7 @@ from . import forms
 # Create your views here.
 def accueil(request):
     categories = models.Categorie.objects.all()
-    return render(request,"bibliotheque/accueil.html",{"categories":categories})
+    return render(request,"bibliotheque/categorie/accueil.html",{"categories":categories})
 
 def ajout(request):
     cform = forms.CategorieForm()
@@ -21,7 +21,8 @@ def traitement(request):
         return render(request, "bibliotheque/categorie/ajout.html", {"forms": cform})
 def affiche(request, id):
     categorie = models.Categorie.objects.get(pk = id)
-    return render(request,"bibliotheque/categorie/affiche.html",{"categorie": categorie})
+    livres=categorie.livre_set.all()
+    return render(request,"bibliotheque/categorie/affiche.html",{"categorie": categorie, "livres":livres})
 
 def delete(request, id):
     categorie = models.Categorie.objects.get(pk = id)
