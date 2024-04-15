@@ -1,0 +1,17 @@
+{% extends "bibliotheque/main.html" %}
+
+{% block titre %}
+Accueil
+{% endblock %}
+{% block principal %}
+<h3> Liste des catégories : </h3>
+<ul>
+    {% for  categorie  in categories %}
+    <li> {{categorie.nom}} <a href="/bibliotheque/affiche/{{categorie.id}}/"> affiche </a> |
+    <a href="/bibliotheque/delete/{{categorie.id}}/"> delete </a> |
+         <a href="/bibliotheque/update/{{categorie.id}}/"> update </a>
+    </li>
+    {% endfor %}
+</ul>
+
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends "bibliotheque/main.html" %}
+
+{% block titre %}
+Ajout d'une catégorie
+{% endblock %}
+{% block principal %}
+<h3> Ajout d'une catégorie </h3>
+<form action="/bibliotheque/traitementupdate/{{id}}/" method="POST">
+    {% csrf_token %}
+    {{forms.as_ul}}
+    <input type="submit" value="envoyer">
+</form>
+
+{% endblock %}

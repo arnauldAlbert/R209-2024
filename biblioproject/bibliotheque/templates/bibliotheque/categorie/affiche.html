@@ -1,0 +1,9 @@
+{% extends "bibliotheque/main.html" %}
+
+{% block titre %}
+catégorie {{categorie.nom}}
+{% endblock %}
+{% block principal %}
+<h3> Catégorie  {{categorie.nom}}
+    <p> {{categorie.description}} </p>
+{% endblock %}
