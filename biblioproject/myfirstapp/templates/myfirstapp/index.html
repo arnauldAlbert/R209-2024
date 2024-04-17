@@ -1,0 +1,13 @@
+{% extends "myfirstapp/main.html" %}
+
+{% block title %}
+    Bonjour
+{% endblock %}
+
+{% block content %}
+    {% if nom is not None %}
+    <h3> Bonjour M/Mme {{nom}}</h3>
+    {% else %}
+    <h3> Bonjour le monde !!! </h3>
+    {% endif %}
+{% endblock %}

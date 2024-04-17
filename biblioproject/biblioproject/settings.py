@@ -32,6 +32,8 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'bibliotheque.apps.BibliothequeConfig',
+    'myfirstapp.apps.MyfirstappConfig',
+    'biblio2.apps.Biblio2Config',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
