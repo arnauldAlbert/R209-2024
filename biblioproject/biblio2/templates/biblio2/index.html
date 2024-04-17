@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>liste de livres</title>
+</head>
+<body>
+<h3> liste des livres </h3>
+<ul>
+  {% for l in liste %}
+    <li> {{ l.title}}  <a href="/biblio/affiche/{{l.id}}/"> afficher </a>
+    <a href="/biblio/delete/{{l.id}}/"> supprimer </a></li>
+    {% endfor %}
+</ul>
+</body>
+</html>
